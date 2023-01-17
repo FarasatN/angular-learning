@@ -1,0 +1,166 @@
+.c2{
+    box-sizing: border-box;
+    width: 298px;
+    height: auto;
+    // display: flexbox;
+    // justify-content: center;
+    margin: auto;
+    padding: 0;
+    border: 0;
+}
+
+.c2 mat-card-actions{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.c2 p{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+.c2 ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    // align-items: stretch;
+    // justify-content: stretch;
+    // position: relative;
+
+}
+
+.c2 li{
+    margin: 0;
+    padding: 0;
+}
+
+.c2 mat-card-actions  button{
+    width: 100px;
+    height: 50px;
+    // text-align: center;
+    // display: flex;
+    // justify-content: stretch;
+    position: relative;
+    right: 17px;
+    top:16px;
+}
+
+.c2 #fb{
+    background-color: #3f51b5;
+    border-right: 2px solid white;
+}
+
+.c2 #tw{
+    background-color: #03a9f4;
+    border-right: 2px solid white;
+
+}
+
+.c2 #g{
+    background-color: #c50a0a;
+}
+
+
+
+
+
+
+//responsive user profile card
+
+
+
+.c1{
+    box-sizing: content-box;
+    // width: 398px;
+    // height: 300px;
+    // display: flexbox;
+    // justify-content: center;
+    margin: auto;
+    padding: 0;
+    border: 0;
+}
+
+.c1 mat-card{
+    max-height: 450px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.c1 mat-card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 180px;
+    max-width: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.c1 mat-card-content{
+
+    padding-bottom: 10rem;
+}
+
+.c1 mat-card p{
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+}
+
+.c1 mat-card-actions{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.c1 ul{
+    display: flex;
+    width: 100%;
+}
+
+.c1 button{
+    // display: inline-block;
+    // float: left;
+    // position: absolute;
+    // left: 0;
+    width: 33.33%;
+    // height: 20px;
+    border: none;
+    padding: 5% 2%;
+    text-align: center;
+//     display: table-cell;
+//   vertical-align: middle
+}
+
+.c1 #fb{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #3f51b5;
+    border-right: 2px solid white;
+    // align-self: stretch;
+}
+
+.c1 #tw{
+    position: absolute;
+    left: 33.33%;
+    right: 33.33%;
+    bottom: 0;
+    background-color: #03a9f4;
+    border-right: 2px solid white;
+
+}
+
+.c1 #g{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #c50a0a;
+}

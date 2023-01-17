@@ -1,5 +1,291 @@
+<app-learning-ng></app-learning-ng>
+<app-card-demo></app-card-demo>
+<app-expansion-demo></app-expansion-demo>
+<!-- 
+<router-outlet>
+</router-outlet> -->
 
-<app-my-header></app-my-header>
-<app-my-middle></app-my-middle>
-<app-my-footer></app-my-footer>
-<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div style="max-width:400px;margin:auto;padding:1em;">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Codible</mat-card-title>
+            <mat-card-subtitle>Codible.com</mat-card-subtitle>
+            <img src="https://codeible.com/assets/images/icons/codible_256.png" mat-card-avatar alt="">
+        </mat-card-header>
+        <img src="https://codeible.com/assets/images/icons/codible_256.png" mat-card-image alt="">
+
+        <mat-card-content>
+            <p>Codeible! Please Like, Share, and Subscribe!</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button>Like</button>
+            <button>Share</button>
+            <button>Subscribe</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<br>
+<hr>
+<br>
+
+<button mat-button color="primary" style="background-color: aqua;">Default Button</button>
+<button mat-raised-button color="accent">Raised Button</button>
+<button mat-flat-button color="warn">Flat Button</button>
+<button mat-stroked-button color="primary">Stroked Button</button>
+
+<br>
+<hr>
+<br>
+
+<button mat-icon-button color="primary" aria-label="iconButton">
+    <mat-icon>backup</mat-icon>
+</button>
+
+<button mat-fab color="primary" aria-label="fabButton">
+    <mat-icon>backup</mat-icon>
+</button>
+
+<button mat-mini-fab color="primary" aria-label="miniFabButton">
+    <mat-icon>backup</mat-icon>
+</button>
+
+<br>
+<hr>
+<br>
+
+<div class="badgeExampleStyle">
+    <button matBadge="{{myVariable}}"
+    matBadgePosition="before"
+    matBadgeSize="small"
+    matBadgeColor="warn"
+    [matBadgeHidden]="false">
+        Badge Example
+    </button>
+    <hr>
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<div class="menuExampleStyle">
+    <button [mat-menu-trigger-for]="mainMenu">Menu Example</button>
+</div>
+
+<mat-menu #mainMenu overlapTrigger yPosition="above" xPosition="after">
+    <button mat-menu-item [mat-menu-trigger-for]="subMenu">Item 1</button>
+    <button mat-menu-item>Item 2</button>
+    <button mat-menu-item>Item 3</button>
+</mat-menu>
+
+<mat-menu #subMenu>
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+    <button mat-menu-item>Item 3</button>
+</mat-menu>
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="progressBarStyle">
+    <mat-progress-bar [mode]="'determinate'"
+    [value]="percent"
+    color="accent"></mat-progress-bar>
+    <mat-progress-bar [mode]="'indeterminate'"></mat-progress-bar>
+    <mat-progress-bar [mode]="'buffer'"
+    [bufferValue]="80"
+    [value]="percent"></mat-progress-bar>
+    <mat-progress-bar [mode]="'query'"></mat-progress-bar>
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<div style="padding:3em 3em;">
+
+    <mat-accordion [multi]="true">
+        <mat-expansion-panel [expanded]="true" hideToggle [disabled]="false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>Codeible</mat-panel-title>
+                <mat-panel-description>Expansion</mat-panel-description>
+            </mat-expansion-panel-header>
+    
+            <div>
+                <img src="https://codeible.com/assets/images/icons/codible_256.png" alt="">
+            </div>
+        
+            <mat-action-row>
+                <button>Subscribe</button>
+            </mat-action-row>
+    
+        </mat-expansion-panel>
+        <mat-expansion-panel expanded="open=false" hideToggle [disabled]="false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>Codeible</mat-panel-title>
+                <mat-panel-description>Expansion</mat-panel-description>
+            </mat-expansion-panel-header>
+    
+            <div>
+                <img src="https://codeible.com/assets/images/icons/codible_256.png" alt="">
+            </div>
+        
+            <mat-action-row>
+                <button (button)="onSubClick()">Subscribe</button>
+            </mat-action-row>
+    
+        </mat-expansion-panel>
+    </mat-accordion>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+<div class="container" style="padding:3em">
+    <mat-tab-group 
+    [backgroundColor]="'primary'" [color]="'warn'"
+    mat-stretch-tabs [headerPosition]="'below'">
+        <mat-tab [label]="'Tab 1'">
+            <ng-template mat-tab-label>
+                <mat-icon>thumb_up</mat-icon>Like
+            </ng-template>
+            <h1>Content for Tab 1</h1>
+        </mat-tab>
+        <mat-tab [disabled]="true" [label]="'Tab 2'">
+            <h1>Content for Tab 2</h1>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+
+
+
+<br>
+<hr>
+<br>
+
+<div style="padding:3em;">
+
+    <mat-horizontal-stepper linear [labelPosition]="'bottom'">
+        <mat-step [editable]="true" [completed]="completed" label="Step 1">
+            <ng-template matStepLabel>
+                <p>Like</p>
+                <mat-icon>thumb_up</mat-icon>
+            </ng-template>
+            <div>
+                <h1>Content for Step 1</h1>
+                <button matStepperNext>Next</button>
+                <button (click)="completeStep()">Complete Step</button>
+
+            </div>
+        </mat-step>
+        <mat-step label="Step 2">
+            <div>
+                <h1>Content for Step 1</h1>
+                <button matStepperPrevious>Previous</button>
+                <button matStepperNext>Next</button>
+                <button (click)="completeStep()">Complete Step</button>
+
+            </div>
+        </mat-step>
+        <mat-step label="Step 3">
+            <div>
+                <h1>Content for Step 1</h1>
+                <button matStepperPrevious>Next</button>
+                <button (click)="completeStep()">Complete Step</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<div style="padding: 3em">
+    <button (click)="openDialogClick()">Open Dialog</button>
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<div style="padding:3em">
+    <button (click)="onTriggerSheetClick()">Trigger Sheet</button>
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<div style="padding: 20em 5em 5em 5em; text-align:center;">
+
+    <div>
+        <button 
+        matTooltipShowDelay="1000"
+        matTooltipHideDelay="1000"
+        matTooltipPosition="below" mat-raised-button color="accent" matTooltip="Message">Tooltip Example</button>
+    </div>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<div class="container">
+
+    <div cdkDrag id="bounding-box">
+        <div cdkDrag 
+        cdkDragLockAxis="x"
+        cdkDragBoundary="#bounding-box" class="drag-box">
+            Like, Share, and Subscribe!
+        </div>
+        <div class="handle" cdkDragHandle>
+
+        </div>
+    </div>
+</div>
+
+<div cdkDrag cdkDropList>
+    <div *ngFor="let animal of ownedAnimals">
+        {{animal}}
+    </div>
+</div>
+
+-->
